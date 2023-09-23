@@ -1,0 +1,41 @@
+name: Deploy to Web3.Storage
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.0
+
+      - name: Install require packages
+        run: npm install 
+
+      - name: Install Next.js
+        run: npm install next
+        
+      - name: Build Next.js site
+        run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Web3.Storage CLI
+        run: npm install -g web3.storage-cli
+
+      - name: Deploy to Web3.Storage
+        run: web3.storage upload --token ${{ secrets.WEB3_STORAGE_TOKEN }} public dist/*
+
+      - name: Set output variables
+        id: outputs
+        run: |
+          echo "Web3.Storage CID: $(web3.storage info --output json)" >> $GITHUB_OUTPUT
