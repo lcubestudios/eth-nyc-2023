@@ -1,0 +1,94 @@
+/*
+	* MOBILE
+*/
+:root {
+	--color-white: #EFF2FA;
+	--color-gray-001: #F5F5F5;
+	--color-gray-002: #EDEDED;
+	--color-gray-003: #B2B2B2;
+	--color-black: #1F1D29;
+	--color-main-primary: #ABF131;
+	--color-main-secondary: #A3EFD0;
+	--color-main-tertiary: #42FFB0;
+	--color-accent-primary: #FE500C;
+	--color-accent-secondary: #FF1A0B;
+
+	/* Breakpoints */
+	--breakpoint-mobile: 516px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-laptop: 1024px;
+	--breakpoint-desktop: 1280px;
+	--breakpoint-tv: 1920px;
+
+	/* Typography */
+	--heading-font-family: 'VT323', Helvetica, Arial, sans-serif;
+	--default-font-family: 'Figtree', Helvetica, Arial, sans-serif;
+
+	--base-font-size: 12px; 
+	--base-line-height: 1.2; 
+	--base-font-weight: 400;
+	--jumbo-font-size: 5.667rem;
+	--jumbo-line-height: var(--base-line-height);
+	--jumbo-font-weight: 500;
+	--large-font-size: 4rem;
+	--large-line-height: var(--base-line-height);
+	--large-font-weight: 500;
+	--h1-font-size: 2.833rem;
+	--h1-line-height: var(--base-line-height);
+	--h1-font-weight: 500;
+	--h2-font-size: 2rem;
+	--h2-line-height: var(--base-line-height);
+	--h2-font-weight: 500;
+	--h3-font-size: 1.417rem;
+	--h3-line-height: var(--base-line-height);
+	--h3-font-weight: 500;
+	--h4-font-size: 1rem;
+	--h4-line-height: var(--base-line-height);
+	--h4-font-weight: 400;
+	--body-font-size: 1rem;
+	--body-line-height: var(--base-line-height);
+	--body-font-weight: 400;
+	--label-font-size: 0.833rem;
+	--label-line-height: var(--base-line-height);
+	--label-font-weight: 400;
+	--small-font-size: 0.667rem;
+	--small-line-height: var(--base-line-height);
+	--small-font-weight: 400;
+
+	/* Spacing */
+	--gap: 4px;
+	--margin: 12px;
+	--max-container-width: 1680px; 
+
+	/* Animation */
+	--animation-speed: 0.25s;
+
+	/* Colors */
+	--primary-bgcolor: var(--color-black);
+	--primary-textcolor: var(--color-main-primary);
+
+	/* Border Radius */
+	--border-radous: 8px;
+
+	/* Shadows */
+	--shadow: 1px 1px 4px #00000029;
+}
+
+/*
+	* LARGE DESKTOP
+*/
+@media (min-width: 1024px) {
+	:root {
+		/* Typography */
+		--base-font-size: 16px;  
+		--jumbo-font-size: 5.625rem;
+		--large-font-size: 4rem;
+		--h1-font-size: 2.813rem;
+		--h2-font-size: 2rem;
+		--h3-font-size: 1.438rem;
+		--h4-font-size: 1rem;
+		--body-font-size: 1rem;
+		--label-font-size: 0.688rem;
+		--small-font-size: 0.5rem;
+	}
+}

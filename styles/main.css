@@ -1,0 +1,5 @@
+@import './tailwind.css';
+
+@import './_fontface.css';
+@import './_variables.css';
+@import './_globals.css';
