@@ -1,5 +1,21 @@
 
+import {useRouter} from 'next/router';
+import {useEffect} from 'react';
+import {usePrivy} from '@privy-io/react-auth';
+
 export default function QuizPage() {
+	const router = useRouter();
+  const {
+    ready,
+    authenticated
+	} =  usePrivy();
+
+  useEffect(() => {
+    if (ready && !authenticated) {
+      router.push('/');
+    }
+  }, [ready, authenticated, router]);
+
   return (
     <>
       <main className="flex min-h-screen min-w-full">
