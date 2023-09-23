@@ -1,25 +1,21 @@
 {
   "name": "quiztopia-web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lcubestudios/quiztopia-web.git"
-  },
-  "keywords": [
-    "web3",
-    "blockchain",
-    "education",
-    "ethnyc2023"
-  ],
-  "author": "Lukas A.V.B.",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lcubestudios/quiztopia-web/issues"
-  },
-  "homepage": "https://github.com/lcubestudios/quiztopia-web#readme"
+  "dependencies": {
+    "autoprefixer": "10.4.16",
+    "eslint": "8.50.0",
+    "eslint-config-next": "13.5.2",
+    "next": "13.5.2",
+    "postcss": "8.4.30",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3"
+  }
 }
