@@ -32,7 +32,7 @@ jobs:
         run: npm install web3.storage
 
       - name: Check current path
-        run: pwd
+        run: pwd && ls
 
       # - name: Deploy to Web3.Storage
       #   run: web3.storage upload --token ${{ secrets.WEB3_STORAGE_TOKEN }} public dist/*
