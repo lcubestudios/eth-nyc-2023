@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to Web3.Storage
         run: web3.storage upload --token ${{ secrets.WEB3_STORAGE_TOKEN }} public dist/*
 
-      - name: Set output variables
-        id: outputs
-        run: |
-          echo "Web3.Storage CID: $(web3.storage info --output json)" >> $GITHUB_OUTPUT
+      # - name: Set output variables
+      #   id: outputs
+      #   run: |
+      #     echo "Web3.Storage CID: $(web3.storage info --output json)" >> $GITHUB_OUTPUT
