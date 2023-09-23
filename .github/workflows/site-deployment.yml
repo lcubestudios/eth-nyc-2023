@@ -6,12 +6,27 @@ on:
       - master
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.14.8
+
+      - name: Install packages
+        run: npm install 
+
+      - name: Build Next.js site
+        run: npm run build
+
   deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Install Web3.Storage CLI
-        run: npm install -g web3.storage-cli
+        run: npm install web3.storage
 
       - name: Deploy to Web3.Storage
         run: web3.storage upload --token ${{ secrets.WEB3_STORAGE_TOKEN }} public dist/*
