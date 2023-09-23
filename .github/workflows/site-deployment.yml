@@ -16,7 +16,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install packages
         run: npm install 
@@ -30,12 +30,15 @@ jobs:
 
     steps:
       - name: Install Web3.Storage CLI
-        run: npm install web3.storage
+        run: npm install -g @web3-storage/w3cli
 
-      - name: Deploy to Web3.Storage
-        run: bash -c "web3.storage upload --token ${{ secrets.WEB3_STORAGE_TOKEN }} public\.dist/*"
+      - name: Authorize Web3
+        run: w3 authorize lmunoz@cryptorepair.com
 
-      - name: Set output variables
-        id: outputs
-        run: |
-          echo "Web3.Storage CID: $(web3.storage info --output json)" >> $GITHUB_OUTPUT
+      # - name: Create web3 Space
+      #   run: w3 space create app
+
+      # - name: Validate web3 Space
+      #   run: w3 space register
+      - name: Deploy to web3
+        run: w3 up public/dist/*
