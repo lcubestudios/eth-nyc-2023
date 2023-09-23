@@ -1,28 +1,18 @@
-import {useRouter} from 'next/router';
-import {usePrivy} from '@privy-io/react-auth';
-import {useEffect} from 'react';
 
-export default function LoginPage() {
+import {useRouter} from 'next/router';
+import {useEffect} from 'react';
+import {usePrivy} from '@privy-io/react-auth';
+
+export default function RegisterPage() {
 	const router = useRouter();
   const {
     ready,
-    authenticated,
-		login
-	} = usePrivy();
-
-	const handleAuthenticate = () => {
-		const isUser = false
-		if (isUser) {
-			router.push('/dashboard');
-		}
-		else {
-			router.push('/register');
-		}
-	}
+    authenticated
+	} =  usePrivy();
 
   useEffect(() => {
-    if (ready && authenticated) {
-      handleAuthenticate()
+    if (ready && !authenticated) {
+      router.push('/');
     }
   }, [ready, authenticated, router]);
 
@@ -32,15 +22,14 @@ export default function LoginPage() {
         <div className="flex flex-1 p-6 justify-center items-center">
           <div>
             <div className="text-center">
-							<h2>Welcome to</h2>
-              <h1 className="text-jumbo">Quiztopia</h1>
+							<h2>Registration Form</h2>
             </div>
             <div className="mt-6 flex justify-center text-center">
               <button
                 className="bg-accent-primary hover:bg-accent-secondary py-3 px-6 text-white rounded-lg"
-                onClick={login}
+                onClick={() => router.push('/dashboard')}
               >
-                Log in
+								Submit
               </button>
             </div>
           </div>
