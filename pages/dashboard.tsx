@@ -54,7 +54,7 @@ export default function DashboardPage() {
               <h1 className="text-2xl font-semibold">Privy Auth Demo</h1>
               <button
                 onClick={logout}
-                className="text-sm bg-violet-200 hover:text-violet-900 py-2 px-4 rounded-md text-violet-700"
+                className="text-sm bg-accent-primary hover:bg-accent-secondary py-2 px-4 rounded-md text-white"
               >
                 Logout
               </button>
@@ -65,7 +65,7 @@ export default function DashboardPage() {
                   onClick={() => {
                     unlinkGoogle(googleSubject);
                   }}
-                  className="text-sm border border-violet-600 hover:border-violet-700 py-2 px-4 rounded-md text-violet-600 hover:text-violet-700 disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
+                  className="text-sm border border-main-tertiary hover:border-tertiary-secondary py-2 px-4 rounded-md text-main-tertiary hover:text-tertiary-secondary disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
                   disabled={!canRemoveAccount}
                 >
                   Unlink Google
@@ -75,7 +75,7 @@ export default function DashboardPage() {
                   onClick={() => {
                     linkGoogle();
                   }}
-                  className="text-sm bg-violet-600 hover:bg-violet-700 py-2 px-4 rounded-md text-white"
+                  className="text-sm bg-main-tertiary hover:bg-tertiary-secondary py-2 px-4 rounded-md text-black"
                 >
                   Link Google
                 </button>
@@ -86,14 +86,14 @@ export default function DashboardPage() {
                   onClick={() => {
                     unlinkTwitter(twitterSubject);
                   }}
-                  className="text-sm border border-violet-600 hover:border-violet-700 py-2 px-4 rounded-md text-violet-600 hover:text-violet-700 disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
+                  className="text-sm border border-main-tertiary hover:border-tertiary-secondary py-2 px-4 rounded-md text-main-tertiary hover:text-tertiary-secondary disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
                   disabled={!canRemoveAccount}
                 >
                   Unlink Twitter
                 </button>
               ) : (
                 <button
-                  className="text-sm bg-violet-600 hover:bg-violet-700 py-2 px-4 rounded-md text-white"
+                  className="text-sm bg-main-tertiary hover:bg-tertiary-secondary py-2 px-4 rounded-md text-black"
                   onClick={() => {
                     linkTwitter();
                   }}
@@ -107,14 +107,14 @@ export default function DashboardPage() {
                   onClick={() => {
                     unlinkDiscord(discordSubject);
                   }}
-                  className="text-sm border border-violet-600 hover:border-violet-700 py-2 px-4 rounded-md text-violet-600 hover:text-violet-700 disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
+                  className="text-sm border border-main-tertiary hover:border-tertiary-secondary py-2 px-4 rounded-md text-main-tertiary hover:text-tertiary-secondary disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
                   disabled={!canRemoveAccount}
                 >
                   Unlink Discord
                 </button>
               ) : (
                 <button
-                  className="text-sm bg-violet-600 hover:bg-violet-700 py-2 px-4 rounded-md text-white"
+                  className="text-sm bg-main-tertiary hover:bg-tertiary-secondary py-2 px-4 rounded-md text-black"
                   onClick={() => {
                     linkDiscord();
                   }}
@@ -128,7 +128,7 @@ export default function DashboardPage() {
                   onClick={() => {
                     unlinkEmail(email.address);
                   }}
-                  className="text-sm border border-violet-600 hover:border-violet-700 py-2 px-4 rounded-md text-violet-600 hover:text-violet-700 disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
+                  className="text-sm border border-main-tertiary hover:border-tertiary-secondary py-2 px-4 rounded-md text-main-tertiary hover:text-tertiary-secondary disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
                   disabled={!canRemoveAccount}
                 >
                   Unlink email
@@ -136,7 +136,7 @@ export default function DashboardPage() {
               ) : (
                 <button
                   onClick={linkEmail}
-                  className="text-sm bg-violet-600 hover:bg-violet-700 py-2 px-4 rounded-md text-white"
+                  className="text-sm bg-main-tertiary hover:bg-tertiary-secondary py-2 px-4 rounded-md text-black"
                 >
                   Connect email
                 </button>
@@ -146,7 +146,7 @@ export default function DashboardPage() {
                   onClick={() => {
                     unlinkWallet(wallet.address);
                   }}
-                  className="text-sm border border-violet-600 hover:border-violet-700 py-2 px-4 rounded-md text-violet-600 hover:text-violet-700 disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
+                  className="text-sm border border-main-tertiary hover:border-tertiary-secondary py-2 px-4 rounded-md text-main-tertiary hover:text-tertiary-secondary disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
                   disabled={!canRemoveAccount}
                 >
                   Unlink wallet
@@ -154,7 +154,7 @@ export default function DashboardPage() {
               ) : (
                 <button
                   onClick={linkWallet}
-                  className="text-sm bg-violet-600 hover:bg-violet-700 py-2 px-4 rounded-md text-white border-none"
+                  className="text-sm bg-main-tertiary hover:bg-tertiary-secondary py-2 px-4 rounded-md text-white border-none"
                 >
                   Connect wallet
                 </button>
@@ -164,7 +164,7 @@ export default function DashboardPage() {
                   onClick={() => {
                     unlinkPhone(phone.number);
                   }}
-                  className="text-sm border border-violet-600 hover:border-violet-700 py-2 px-4 rounded-md text-violet-600 hover:text-violet-700 disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
+                  className="text-sm border border-main-tertiary hover:border-tertiary-secondary py-2 px-4 rounded-md text-main-tertiary hover:text-tertiary-secondary disabled:border-gray-500 disabled:text-gray-500 hover:disabled:text-gray-500"
                   disabled={!canRemoveAccount}
                 >
                   Unlink phone
@@ -172,7 +172,7 @@ export default function DashboardPage() {
               ) : (
                 <button
                   onClick={linkPhone}
-                  className="text-sm bg-violet-600 hover:bg-violet-700 py-2 px-4 rounded-md text-white border-none"
+                  className="text-sm bg-main-tertiary hover:bg-tertiary-secondary py-2 px-4 rounded-md text-white border-none"
                 >
                   Connect phone
                 </button>

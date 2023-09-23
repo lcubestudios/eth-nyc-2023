@@ -50,16 +50,16 @@ module.exports = {
       },
       colors: {
         'inherit': 'inherit',
-				'white': 'var(--white)',
-				'gray-001': 'var(--gray-001)',
-				'gray-002': 'var(--gray-002)',
-				'gray-003': 'var(--gray-003)',
-				'black': 'var(--black)',
-				'main-primary': 'var(--main-primary)',
-				'main-secondary': 'var(--main-secondary)',
-				'main-tertiary': 'var(--main-tertiary)',
-				'accent-primary': 'var(--accent-primary)',
-				'accent-secondary': 'var(--accent-secondary)'
+				'white': 'var(--color-white)',
+				'gray-001': 'var(--color-gray-001)',
+				'gray-002': 'var(--color-gray-002)',
+				'gray-003': 'var(--color-gray-003)',
+				'black': 'var(--color-black)',
+				'main-primary': 'var(--color-main-primary)',
+				'main-secondary': 'var(--color-main-secondary)',
+				'main-tertiary': 'var(--color-main-tertiary)',
+				'accent-primary': 'var(--color-accent-primary)',
+				'accent-secondary': 'var(--color-accent-secondary)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

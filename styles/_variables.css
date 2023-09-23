@@ -10,8 +10,8 @@
 	--color-main-primary: #ABF131;
 	--color-main-secondary: #A3EFD0;
 	--color-main-tertiary: #42FFB0;
-	--color-accent-primary: #FE500C;
-	--color-accent-secondary: #FF1A0B;
+	--color-accent-primary: #FF1A0B;
+	--color-accent-secondary: #FE500C;
 
 	/* Breakpoints */
 	--breakpoint-mobile: 516px;
