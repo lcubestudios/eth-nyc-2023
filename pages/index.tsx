@@ -2,21 +2,27 @@ import {useRouter} from 'next/router';
 import {usePrivy} from '@privy-io/react-auth';
 import {useEffect} from 'react';
 
+import {checkUser} from '../utils/user'
+
+import {UiLogo} from '../components/ui/Logo';
+import {UiButton} from '../components/ui/Button';
+
 export default function LoginPage() {
 	const router = useRouter();
   const {
     ready,
     authenticated,
-		login
+		user,
+		login,
+		logout
 	} = usePrivy();
 
-	const handleAuthenticate = () => {
-		const isUser = false
-		if (isUser) {
-			router.push('/dashboard');
-		}
-		else {
-			router.push('/register');
+	const handleAuthenticate = async () => {
+		console.log('home')
+		const checkUserStatus = await checkUser(user?.id)
+		
+		if (checkUserStatus) {
+			router.push(`/${checkUserStatus}`);
 		}
 	}
 
@@ -28,22 +34,30 @@ export default function LoginPage() {
 
   return (
     <>
-      <main className="flex min-h-screen min-w-full">
-        <div className="flex flex-1 p-6 justify-center items-center">
-          <div>
-            <div className="text-center">
-							<h2>Welcome to</h2>
-              <h1 className="text-jumbo">Quiztopia</h1>
+      <main id="viewport">
+        <div className="flex flex-col h-full">
+          <div className="flex-1">
+            <div className="flex flex-col items-center gap-x8 pt-[133px]">
+							<div className="w-[187px]">
+								<UiLogo type="icon" />
+							</div>
+							<div className="w-[160px]">
+								<UiLogo 
+									type="text" 
+									color="white"
+								/>
+							</div>
             </div>
-            <div className="mt-6 flex justify-center text-center">
-              <button
-                className="bg-accent-primary hover:bg-accent-secondary py-3 px-6 text-white rounded-lg"
-                onClick={login}
-              >
-                Log in
-              </button>
+            <div className="mt-[200px] flex justify-center text-center">
+							<UiButton 
+								label='Earn Hearts'
+								onClick={login}
+							/>
             </div>
           </div>
+					<footer className="text-center px-x3">
+						<label className="text-[10px]">Team Quiztopia / ETHNewYork 2023</label>
+					</footer>
         </div>
       </main>
     </>

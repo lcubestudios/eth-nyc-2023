@@ -18,9 +18,9 @@
 		"@heroicons/react": "^2.0.12",
 		"@privy-io/react-auth": "1.30.2",
 		"@tailwindcss/forms": "^0.5.3",
+		"ethers": "^6.7.1",
 		"next": "latest",
-		"react": "18.2.0",
-		"web3": "^4.1.2"
+		"react": "18.2.0"
 	},
 	"devDependencies": {
 		"@tsconfig/node16-strictest-esm": "^1.0.3",

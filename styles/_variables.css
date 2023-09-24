@@ -65,7 +65,7 @@
 
 	/* Colors */
 	--primary-bgcolor: var(--color-black);
-	--primary-textcolor: var(--color-main-primary);
+	--primary-textcolor: var(--color-white);
 
 	/* Border Radius */
 	--border-radous: 8px;
