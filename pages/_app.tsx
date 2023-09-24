@@ -1,16 +1,9 @@
 import '../styles/main.css';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
-import {PrivyProvider,usePrivy} from '@privy-io/react-auth';
-import {useRouter} from 'next/router';
-
-import {checkUser} from '../utils/user'
+import {PrivyProvider} from '@privy-io/react-auth';
 
 function MyApp({Component, pageProps}: AppProps) {
-  const router = useRouter();
-	const {
-		user
-	} = usePrivy()
 
   return (
     <>

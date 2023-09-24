@@ -19,6 +19,8 @@
     "noImplicitReturns": false,
     "noPropertyAccessFromIndexSignature": false,
     "exactOptionalPropertyTypes": false,
+		"strict": false,
+		"noImplicitAny": false
   },
   "include": [
     "next-env.d.ts",

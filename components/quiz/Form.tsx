@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import { UiButton } from '../../components/ui/Button';
 import { useRouter } from 'next/router';
 // import { usePrivy } from '@privy-io/react-auth';

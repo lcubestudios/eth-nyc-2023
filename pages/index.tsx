@@ -13,8 +13,7 @@ export default function LoginPage() {
     ready,
     authenticated,
 		user,
-		login,
-		logout
+		login
 	} = usePrivy();
 
 	const handleAuthenticate = async () => {
