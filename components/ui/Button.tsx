@@ -6,7 +6,7 @@ interface UiButtonPropsType {
   fontSize?: string;
   paddingX?: string;
   paddingY?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export function UiButton(props: UiButtonPropsType) {
