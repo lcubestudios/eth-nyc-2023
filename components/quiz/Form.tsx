@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { UiButton } from '../../components/ui/Button';
-import { usePrivy } from '@privy-io/react-auth';
+// import { useRouter } from 'next/router';
+// import { usePrivy } from '@privy-io/react-auth';
 
-import { registerUser } from '../../utils/user';
-import { useRouter } from 'next/router';
+// import { registerUser } from '../../utils/user';
 
 export function QuizForm() {
-	const router = useRouter()
-	const { user } = usePrivy()
+	// const router = useRouter()
+	// const { user } = usePrivy()
 	const [selectedOption, setSelectedOption] = useState();
 
 	const handleChoiceSelection = (evt) => {
@@ -62,7 +62,7 @@ export function QuizForm() {
 														placeholder="How old are you?"
 														onChange={handleChoiceSelection}
 													/>
-													<label htmlFor={`choice_${order}`} className="text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</label>
+													<label htmlFor={`choice_${order}`} className="text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. {selectedOption === order}</label>
 												</div>
 											</div>
 										})
