@@ -5,10 +5,7 @@ import { usePrivy } from '@privy-io/react-auth';
 import { registerUser } from '../../utils/user';
 import { useRouter } from 'next/router';
 
-interface RegisterFormPropsType {
-}
-
-export function RegisterForm(props: RegisterFormPropsType) {
+export function RegisterForm() {
 	const router = useRouter()
 	const { user } = usePrivy()
 	const [formData, setFormData] = useState({
@@ -53,9 +50,7 @@ export function RegisterForm(props: RegisterFormPropsType) {
 					<div className="brick-edge bg-white"></div>
 					<div className="brick flex-1 relative w-full bg-white">
 						<div className="flex flex-col gap-x6 px-x6 py-x5">
-							<section
-								className="flex flex-col text-white"
-							>
+							<section className="flex flex-col text-white">
 								<div className="brick-edge bg-black"></div>
 								<div className="brick flex-1 relative w-full bg-black">
 									<div className="flex flex-col gap-x4 px-5 pt-x4 py-x8 text-center">

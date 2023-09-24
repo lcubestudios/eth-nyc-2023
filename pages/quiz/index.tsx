@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import {usePrivy} from '@privy-io/react-auth';
 
 import { AppHeader } from '../../components/app/Header';
-import { RegisterForm } from '../../components/register/Form';
+import { QuizForm } from '../../components/quiz/Form';
 
 export default function RegisterPage() {
 	const router = useRouter();
@@ -25,7 +25,7 @@ export default function RegisterPage() {
 				<AppHeader />
         <div className="flex-1 relative">
 					<div className="absolute inset-0">
-						<RegisterForm />
+						<QuizForm />
 					</div>
         </div>
       </main>
