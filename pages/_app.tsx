@@ -2,8 +2,14 @@ import '../styles/main.css';
 import type {AppProps} from 'next/app';
 import Head from 'next/head';
 import {PrivyProvider} from '@privy-io/react-auth';
+import { useRouter } from 'next/router';
 
 function MyApp({Component, pageProps}: AppProps) {
+	const router = useRouter()
+
+	const handleAuth = () => {
+		router.push('/register')
+	}
 
   return (
     <>
@@ -18,6 +24,7 @@ function MyApp({Component, pageProps}: AppProps) {
       </Head>
       <PrivyProvider
         appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID || ''}
+				onSuccess={handleAuth}
 				config={{
 					// Configure your app's branding and UIs
 					appearance: {

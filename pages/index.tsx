@@ -17,7 +17,6 @@ export default function LoginPage() {
 	} = usePrivy();
 
 	const handleAuthenticate = async () => {
-		console.log('home')
 		const checkUserStatus = await checkUser(user?.id)
 		
 		if (checkUserStatus) {

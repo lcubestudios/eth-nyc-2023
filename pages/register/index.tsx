@@ -5,6 +5,7 @@ import {usePrivy} from '@privy-io/react-auth';
 
 import { AppHeader } from '../../components/app/Header';
 import { RegisterForm } from '../../components/register/Form';
+import { checkUser } from '../../utils/user';
 
 export default function RegisterPage() {
 	const router = useRouter();
@@ -13,9 +14,21 @@ export default function RegisterPage() {
     authenticated
 	} = usePrivy();
 
+	const handleAuthenticate = async () => {
+		const checkUserStatus = await checkUser(user?.id)
+		
+		if (checkUserStatus) {
+			router.push(`/${checkUserStatus}`);
+		}
+	}
+
   useEffect(() => {
     if (ready && !authenticated) {
       router.push('/');
+    }
+
+    if (ready && authenticated) {
+      handleAuthenticate()
     }
   }, [ready, authenticated, router]);
 
